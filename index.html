@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+        content="width=device-width,initial-scale=1.0, minimun-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <link rel="icon" href="http://a.hqkid.cn/resources/download/images/favicon.ico">
+    <title>APP下载</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            font-size: 192px;
+        }
+
+        body {
+            bottom: 0;
+            width: 100%;
+        }
+
+        .fl {
+            float: left;
+        }
+
+        p {
+            color: #999;
+        }
+
+        .wrapper {
+            width: 8.14583333rem;
+            margin: 0 auto;
+        }
+
+        .hr {
+            width: 100%;
+            height: 1px;
+            background: linear-gradient(270deg, rgba(222, 222, 222, 0) 0%, #dedede 25%, #dedede 48%, #dedede 72%, rgba(222, 222, 222, 0) 100%);
+        }
+
+        .fr {
+            float: right;
+        }
+
+        header {
+            height: 0.36458333rem;
+            line-height: 0.36458333rem;
+        }
+
+        header .pcLogo {
+            width: 0.57291667rem;
+            margin-left: 14%;
+            vertical-align: middle;
+        }
+
+        header span {
+            width: 0.91666667rem;
+            font-size: 0.08333333rem;
+            font-family: MicrosoftYaHei;
+            color: #666666;
+            vertical-align: middle;
+        }
+
+        .section1 {
+            width: 10rem;
+            height: 2.29166667rem;
+            overflow: hidden;
+            background: url(http://a.hqkid.cn/resources/download/images/pc/banner.png) no-repeat;
+            background-size: 100%;
+        }
+
+        .section1 .box1 {
+            width: 2.34375rem;
+            height: 1.82291667rem;
+            margin: 0.48958333rem 0 0 1.875rem;
+        }
+
+        .section1 .box1 .loveBook span {
+            color: #333333;
+            font-size: 0.20833333rem;
+        }
+
+        .section1 .box1 .loveBook p {
+            color: #999999;
+            font-size: 0.09375rem;
+        }
+
+        .section1 .box1 .ewm {
+            width: 0.78125rem;
+            height: 0.9375rem;
+            margin-top: 0.16145833rem;
+            padding: 0.02604167rem;
+            background-color: #FFFFFF;
+            box-sizing: border-box;
+        }
+
+        .section1 .box1 .ewm p {
+            color: #666666;
+            font-size: 0.08333333rem;
+            text-align: center;
+        }
+
+        .section1 .box1 .download {
+            padding: 0.53645833rem 0 0 0.20833333rem;
+        }
+
+        .section1 .box1 .download div {
+            width: 1.14583333rem;
+            height: 0.22916667rem;
+            line-height: 0.20833333rem;
+            background: #ffc913;
+            border-radius: 0.02604167rem;
+            margin-top: 0.05208333rem;
+            padding-left: 0.239583333rem;
+            box-sizing: border-box;
+        }
+
+        .section1 .box1 .download div span {
+            font-size: 0.08333333rem;
+            color: #fff;
+        }
+
+        .section1 .box1 .download div img {
+            width: 0.125rem;
+            height: 0.125rem;
+            margin: -0.02604167rem 0.03125rem 0 0;
+            vertical-align: middle;
+        }
+
+        .section2 {
+            height: 2.60416667rem;
+            padding: 0.33333333rem 0;
+            box-sizing: border-box;
+        }
+
+        .section2Box1 {
+            width: 2.29166667rem;
+            height: 1.92708333rem;
+            padding: 0.67708333rem 0 0 1.30208333rem;
+        }
+
+        .section2Box1 b {
+            color: #FF6A27;
+            font-size: 0.13541667rem;
+        }
+
+        .section2Box1 span {
+            color: #666666;
+            font-size: 0.13541667rem;
+            font-weight: 700;
+        }
+
+        .p1 {
+            margin-top: 0.03125rem;
+            font-size: 0.09375rem;
+        }
+
+        .p2 {
+            font-size: 0.07291667rem;
+            margin-top: 0.10416667rem;
+        }
+
+        .section2Box2 {
+            width: 3.69791667rem;
+            height: 1.92708333rem;
+        }
+
+        .section2Box3 {
+            width: 100%;
+        }
+
+        .section2Box3 img {
+            width: 100%;
+        }
+
+        .section2Box2 img {
+            width: 100%;
+        }
+
+        .section3 {
+            height: 2.60416667rem;
+            padding: 0.26041667rem 0;
+            box-sizing: border-box;
+        }
+
+        .section3Box1 {
+            width: 1.94791667rem;
+            padding: 0.67708333rem 0.78125rem 0 0;
+            text-align: right;
+        }
+
+        .section3Box1 b {
+            color: #FF6A27;
+            font-size: 0.13541667rem;
+        }
+
+        .section3Box1 span {
+            color: #666666;
+            font-size: 0.13541667rem;
+            font-weight: 700;
+        }
+
+        .section3Box2 {
+            width: 4.6875rem;
+            height: 2.08333333rem;
+        }
+
+        .section3Box2 img {
+            width: 100%;
+        }
+
+        .section4 {
+            height: 2.60416667rem;
+        }
+
+        .section4Box1 {
+            width: 2.13020833rem;
+            padding: 0.875rem 0 0 0.78125rem;
+        }
+
+        .section4Box1 b {
+            color: #FF6A27;
+            font-size: 0.13541667rem;
+        }
+
+        .section4Box1 span {
+            color: #666666;
+            font-size: 0.13541667rem;
+            font-weight: 700;
+        }
+
+        .section4Box2 {
+            width: 4.73958333rem;
+            height: 2.60416667rem;
+        }
+
+        .section4Box2 img {
+            width: 100%;
+        }
+
+        .immediately {
+            display: none;
+        }
+
+        footer {
+            width: 10rem;
+            height: 2.60416667rem;
+            background: url(http://a.hqkid.cn/resources/download/images/pc/bg1.png) no-repeat;
+            background-size: 100%;
+            overflow: hidden;
+        }
+
+        .pcFooter {
+            width: 2.296875rem;
+            display: block !important;
+            text-align: right;
+            margin-top: 0.98958333rem;
+            margin-left: 6.21875rem;
+        }
+
+        .pcFooter p {
+            color: #666666;
+            font-size: 0.13541667rem;
+        }
+
+        .pcFooter span {
+            color: #999999;
+            font-size: 0.09375rem;
+        }
+
+        .bottom {
+            width: 10rem;
+            height: 0.5rem;
+            text-align: center;
+            background-color: #f1f1f1;
+            font-size: 0.0625rem;
+            padding: 0.13020833rem 0;
+            box-sizing: border-box;
+        }
+
+        .bottom p,
+        .bottom a {
+            color: #bcbcbc;
+            text-decoration: none;
+        }
+
+        .bottom p:nth-child(1) {
+            margin-bottom: 3px;
+        }
+
+        .bottom a img {
+            width: 0.10416667rem;
+            height: 0.10416667rem;
+            vertical-align: middle;
+        }
+
+        .bottom a:hover {
+            color: #ff6a27;
+        }
+
+        @media screen and (max-width: 970px) {
+            html {
+                font-size: 37.5px;
+            }
+
+            .p1 {
+                margin: 0.08rem 0 0.37333333rem;
+                font-size: 0.457142867rem;
+            }
+
+            .p2 {
+                width: 80%;
+                font-size: 0.37333333rem;
+                margin: 0 auto;
+            }
+
+            section b {
+                color: #FF6A27;
+                font-size: 0.53333333rem !important;
+            }
+
+            section span {
+                color: #666666;
+                font-size: 0.53333333rem !important;
+                font-weight: 700;
+            }
+
+            /* ================================================= */
+            header {
+                height: 1.6rem;
+                line-height: 1.6rem;
+                overflow: hidden;
+            }
+
+            header .pcLogo {
+                display: none;
+            }
+
+            header .mobileLogo {
+                display: block !important;
+                width: 2.16rem;
+                height: 1.01333333rem;
+                margin-left: 0.64rem;
+                margin-top: 0.29333333rem;
+                box-sizing: border-box;
+            }
+
+            header span {
+                display: none;
+            }
+
+            .section1 {
+                height: 12.8rem;
+                width: 100%;
+                background: url(http://a.hqkid.cn/resources/download/images/mobile/banner.png) no-repeat;
+                background-size: 100% 12.8rem;
+            }
+
+            .section1 .box1 {
+                width: 100%;
+                margin: 0.88rem 0 0;
+                text-align: center;
+            }
+
+            .section1 .box1 .loveBook span {
+                font-size: 0.571428571rem !important;
+                font-weight: 400 !important;
+            }
+
+            .section1 .box1 .loveBook p {
+                margin-top: 0.18666667rem;
+                font-size: 0.37333333rem;
+            }
+
+            .section1 .box1 .ewm {
+                display: none;
+            }
+
+            .section1 .box1 .download {
+                display: none;
+            }
+            .section1 .box1 .immediately {
+                display: block;
+                width: 4rem;
+                height: 1.17333333rem;
+                text-align: center;
+                background: url(http://a.hqkid.cn/resources/download/images/mobile/download.png) no-repeat 100%;
+                margin: 0.914285714rem auto 0;
+                border-radius: 5px;
+            }
+            .section1 .box1 .immediately b {
+                font-size: 0.457142867rem !important;
+                width:64px;
+                line-height: 1.17333333rem;
+                font-weight: 600 !important;
+                color: #fff !important;
+            }
+            .section2 {
+                width: 100%;
+                height: 11.57333333rem;
+                padding: 0;
+            }
+
+            .section2Box1 {
+                width: 100%;
+                height: 5.01333333rem;
+                text-align: center;
+                box-sizing: border-box;
+                padding: 1.06666667rem 0 0;
+            }
+
+            .section2Box2 {
+                display: none;
+            }
+
+            .section2Box3 {
+                height: 5.6rem;
+                display: block !important;
+            }
+
+            .section2Box3 img {
+                max-width: 11.57333333rem;
+                max-height: 5.73333333rem;
+                display: block;
+                margin: 0 auto;
+            }
+
+            .section3 {
+                width: 100%;
+                height: 11.46666667rem;
+                padding: 0;
+            }
+
+            .section3Box1 {
+                width: 100%;
+                height: 4.66666667rem;
+                box-sizing: border-box;
+                padding: 1.06666667rem 0 0;
+                text-align: center;
+            }
+
+            .section3Box2 {
+                display: none;
+            }
+
+            .section4 {
+                width: 100%;
+                height: 9.86666667rem;
+            }
+
+            .section4Box1 {
+                width: 100%;
+                height: 4.13333333rem;
+                padding: 1.06666667rem 0 0;
+                box-sizing: border-box;
+                text-align: center;
+            }
+
+            .section4Box2 {
+                display: none;
+            }
+
+            footer {
+                width: 100%;
+                height: 8rem;
+                background: url(http://a.hqkid.cn/resources/download/images/mobile/bg1.png) no-repeat;
+                background-size: 100%;
+            }
+
+            .pcFooter {
+                display: none !important;
+            }
+
+            .footerText {
+                display: block !important;
+                text-align: center;
+                overflow: hidden;
+                padding-top: 2.8rem;
+            }
+
+            .footerText p {
+                color: #fff;
+                line-height: 0.74666667rem;
+                font-size: 0.53333333rem;
+                font-weight: 700;
+            }
+
+            .footerText span {
+                display: block;
+                font-size: 0.37333333rem;
+                color: #dedede;
+                margin-top: 0.37333333rem;
+            }
+
+            .bottom {
+                width: 100%;
+                height: 1.6rem;
+                font-size: 0.32rem;
+                padding-top: 0.26666667rem;
+            }
+
+            .bottom img {
+                width: 0.4rem !important;
+                height: 0.4rem !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <img src="http://a.hqkid.cn/resources/download/images/pc/logo.png" class="pcLogo" alt="">
+        <img src="http://a.hqkid.cn/resources/download/images/mobile/logo.png" style="display: none;"
+            class="mobileLogo">
+        <span>环球少儿应用中心</span>
+    </header>
+    <section class="section1">
+        <div class="box1 fl">
+            <div class="loveBook">
+                <span>让孩子爱上读书</span>
+                <p>绑定机器人 | 数据迭代功能更新 | 自主阅读习惯养成</p>
+            </div>
+            <div>
+                <div class="ewm fl">
+                    <img src="http://a.hqkid.cn/resources/download/images/pc/ewm.png" width="100%" alt="">
+                    <p>扫描上方二维码</p>
+                </div>
+                <div class="download fl">
+                    <div><img src="http://a.hqkid.cn/resources/download/images/pc/ios.png" alt=""><span>iPhone版本</span>
+                    </div>
+                    <div><img src="http://a.hqkid.cn/resources/download/images/pc/android.png"
+                            alt=""><span>Android版本</span></div>
+                </div>
+                <div class="immediately"><b>立即下载</b></div>
+            </div>
+        </div>
+    </section>
+    <section class="section2 wrapper">
+        <div class="section2Box1 fl">
+            <b>科学</b><span>计划</span>&nbsp;<b>习惯</b><span>养成</span>
+            <p class="p1">针对3-8岁宝宝</p>
+            <p class="p2">
+                深度结合绘本课程设计进阶计划，分龄分版、小步前进，家庭组同步跟踪学习数据，孩子实实在在掌握知识，潜移默化养成自主学习习惯。</p>
+        </div>
+        <div class="section2Box2 fr">
+            <img src="http://a.hqkid.cn/resources/download/images/pc/bg2.png" alt="">
+        </div>
+        <div class="section2Box3" style="display: none; width: 100%;">
+            <img src="http://a.hqkid.cn/resources/download/images/mobile/bg2.png" alt="">
+        </div>
+    </section>
+    <div class="hr"></div>
+    <section class="section3 wrapper">
+        <div class="section3Box2 fl">
+            <img src="http://a.hqkid.cn/resources/download/images/pc/bg3.png" alt="">
+        </div>
+        <div class="section3Box1 fr">
+            <b>音频</b><span>随播</span>&nbsp;<span>想听</span><span>就听</span>
+            <p class="p1">中英双语课程 磨耳朵学知识</p>
+            <p class="p2">古诗词、成语故事、文化常识、国学经典、英文字母词句、日常生活、自然事物、安全知识……</p>
+        </div>
+
+        <div class="section2Box3" style="display: none; width: 100%;">
+            <img src="http://a.hqkid.cn/resources/download/images/mobile/bg3.png" alt="">
+        </div>
+    </section>
+    <div class="hr"></div>
+    <section class="section4 wrapper">
+        <div class="section4Box1 fl">
+            <b>真人</b><span>互动</span>&nbsp;<b>动画</b><span>巩固</span>
+            <p class="p1">原创IP穿针引线 知识故事化</p>
+            <p class="p2">
+                场景贴合知识点，帮助孩子在赏心悦目、寓教于乐的情境下更好地理解，身临其境、快乐学习</p>
+        </div>
+        <div class="section4Box2 fr">
+            <img src="http://a.hqkid.cn/resources/download/images/pc/bg4.png" alt="">
+        </div>
+        <div class="section2Box3" style="display: none; width: 100%;">
+            <img src="http://a.hqkid.cn/resources/download/images/mobile/bg4.png" alt="">
+        </div>
+    </section>
+    <footer>
+        <div class="pcFooter">
+            <div>
+                <p>APP快速迭代</p>
+                <p>让环球少儿更懂你，让你更懂教育</p>
+                <span>原创绘本+暖萌机器人讲读+视频动画多维度沉浸式教学</span>
+            </div>
+        </div>
+        <div class="footerText" style="display: none;">
+            <p>APP快速迭代</p>
+            <p>让环球少儿更懂你，让你更懂教育</p>
+            <span>原创绘本+暖萌机器人讲读+视频动画多维度沉浸式教学</span>
+        </div>
+    </footer>
+    <div class="bottom">
+        <p>备案/许可证编号为：津ICP备19009286号-1</p>
+        <p>
+            <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=12011602000267" target="_blank">
+                <img src="http://a.hqkid.cn/resources/download/images/ba.png" />
+                津公网安备 12011602000267号
+            </a>
+        </p>
+    </div>
+    <script src="resources/download/flexible.js"></script>
+</body>
+
+</html>
