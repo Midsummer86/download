@@ -547,7 +547,7 @@
                         </div>
                     </a>
                 </div>
-                <a href="http://a.hqkid.cn/resources/download/images/pc/android.png" style="text-decoration: none;">
+                <a id="download" href="" style="text-decoration: none;">
                     <div class="immediately">
                         <p>立即下载</p>
                     </div>
@@ -624,7 +624,8 @@
     </div>
     <script src="http://a.hqkid.cn/resources/download/flexible.js"></script>
     <script>
-        isAndroidFun() {
+        var download = document.getElementById('download')
+        download.click =  function() {
             var u = navigator.userAgent;
             var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Linux') > -1; 
             var isIOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/);
@@ -635,7 +636,6 @@
                 alert('苹果机')
             }
         }
-        isAndroidFun()
     </script>
 </body>
 
