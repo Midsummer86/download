@@ -304,7 +304,7 @@
             color: #ff6a27;
         }
 
-        @media screen and (max-width: 970px) {
+        @media screen and (max-width: 1024px) {
             html {
                 font-size: 37.5px;
             }
@@ -391,12 +391,15 @@
                 width: 4rem;
                 height: 1.17333333rem;
                 text-align: center;
-                background: url(http://a.hqkid.cn/resources/download/images/mobile/download.png) no-repeat 100%;
+                background: url(http://a.hqkid.cn/resources/download/images/mobile/download.png) no-repeat;
+                background-size: 100% 100%;
                 margin: 0.914285714rem auto 0;
                 border-radius: 5px;
             }
 
-            .section1 .box1 .immediately p {
+            .section1 .box1 .immediately a {
+                display: block;
+                text-decoration: none;
                 font-size: 0.457142867rem !important;
                 line-height: 1.17333333rem;
                 font-weight: 600 !important;
@@ -534,24 +537,22 @@
                     <p>扫描上方二维码</p>
                 </div>
                 <div class="download fl">
-                    <a href="https://itunes.apple.com/cn/app/id1491102327?mt=8" style="text-decoration: none;">
+                    <a href="https://itunes.apple.com/cn/app/id1491102327?mt=8" style="text-decoration: none;display: block;">
                         <div>
                             <img src="http://a.hqkid.cn/resources/download/images/pc/ios.png" alt="">
                             <span>iPhone版本</span>
                         </div>
                     </a>
-                    <a href="" style="text-decoration: none;">
+                    <a href="" style="text-decoration: none;display: block;">
                         <div>
                             <img src="http://a.hqkid.cn/resources/download/images/pc/android.png" alt="">
                             <span>Android版本</span>
                         </div>
                     </a>
                 </div>
-                <a id="download" href="" style="text-decoration: none;">
                     <div class="immediately">
-                        <p>立即下载</p>
+                        <a id="download" href="">立即下载</a>
                     </div>
-                </a>
             </div>
         </div>
     </section>
@@ -625,15 +626,17 @@
     <script src="http://a.hqkid.cn/resources/download/flexible.js"></script>
     <script>
         var download = document.getElementById('download')
-        download.click =  function() {
+        download.onclick =  function() {
             var u = navigator.userAgent;
             var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Linux') > -1; 
             var isIOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/);
             if (isAndroid) {
                 alert('安卓机')
+                download.setAttribute('href','http://a.hqkid.cn/resources/download/images/pc/android.png');
             }
             if (isIOS) {
                 alert('苹果机')
+                download.setAttribute('href','https://itunes.apple.com/cn/app/id1491102327?mt=8');
             }
         }
     </script>
